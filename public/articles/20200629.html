@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARU</title>
+    <link href="https://getbootstrap.com/docs/4.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/06fb83cb17.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../border.css">
+    <link rel="stylesheet" href="../box.css">
+    <link rel="stylesheet" href="../button.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../font.css">
+    <link rel="stylesheet" href="../outline.css">
+    <style>
+        #i-am-progress-indicator {
+            position:fixed;
+            top: 0;
+            left:0;
+            height: 10px;
+            background:orange;
+            width:0%;
+        }
+        hr{
+            background-color: gray;
+        }
+        .bg{
+            background-image: url("../bg.jpg");
+        }
+    </style>
+</head>
+<body class = "box-black" onload = "onBodyLoad();">
+    <nav class = "navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(255, 255, 255, 0.5);">
+        <div class = "container">
+            <a class = "bold large black navbar-brand">HARU</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto"></ul>
+                &nbsp;&nbsp;&nbsp;<i class = "black large fas fa-home"></i>
+                &nbsp;&nbsp;&nbsp;<i class = "black large fas fa-heart"></i>
+                &nbsp;&nbsp;&nbsp;<i class = "black large fas fa-share"></i>
+            </div>
+        </div>
+    </nav>
+    <div class = "bg" style = "position: fixed; top: 0; left: 0; right: 0; z-index: -1;"> 
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <p id = "maintxt" class = "center intro white blurshadow-grey"></p><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p class = "mintro white blurshadow-darkgray" style = "margin-left: 1em;">윤석현 거의형석</p>
+    <main class = "box-black fill">
+        <br>
+        <p style = "margin-left: 2.5em;"><i class="fas fa-rss-square"></i>&nbsp;HARU - 하루<br><i class="fas fa-pencil-alt"></i>&nbsp;작성일: 2020년 6월 29일<br><i class="fas fa-user-edit"></i>&nbsp;작성자: 홍은표<br><i class="fas fa-clock"></i>&nbsp;읽는 데 1분</p>
+        <hr>
+        <br><br><br><br><br><br><br>
+        <div id="blog_content" class = "container large">
+            <!-- 여기 위는 편집하지 마세요. -->
+            
+            <!-- 여기 아래는 편집하지 마세요. -->
+        </div>
+        <br><br><br><br><br><br><br>
+    </main>
+    <footer class = "site-footer box-grey" style = "background-color: rgba(255, 255, 255, 0.9);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-15 col-md-10">
+                <h5 class = "black">HARU(하루)</h6>
+                <ul class="footer-links black">
+                    <li><a style = "margin: 5px" href="./license.html">라이선스</a><a style = "margin: 5px" href="https://github.com/potato179/">소스코드</a><a style = "margin: 5px" href="http://scanfcode.com/sitemap/">파트너</a></li>
+                </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by <a href="#">홍은표</a>. MIT Licensed.</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        var progressIndicator = '<div id="i-am-progress-indicator"></div>';
+        $('body').append(progressIndicator);
+
+        $(window).on('scroll', function(){
+            var currentPercentage = ($(window).scrollTop() / ($(document).outerHeight() - $(window).height())) * 100;
+            $('#i-am-progress-indicator').width(currentPercentage+'%');
+        });
+
+        function onBodyLoad(){
+
+            var pageName = "";
+ 
+            var tempPageName = window.location.href;
+            var strPageName = tempPageName.split("/");
+            pageName = strPageName[strPageName.length-1].split("?")[0];
+    
+            var pageNameMd = pageName.replace("html", "md");
+             console.log(pageNameMd);
+
+
+            //blog_content
+
+            var sendData = {
+                pageName: pageNameMd 
+            };
+
+            var ajaxData = { 
+                type: "GET", 
+                url : "../../md",
+                data: sendData, 
+                dataType: "text", 
+                success :  onSuccess,
+                error: onError
+            };
+            $.ajax(ajaxData);
+
+
+
+
+        }
+
+        function onSuccess (data, status, xhr) { 
+            console.log(data);
+
+            $("#blog_content").html(data);
+
+        }
+
+        function onError (jqXHR, textStatus, errorThrown) { 
+            console.log(jqXHR.responseText); 
+        }
+
+    </script>
+</body>
+</html>
+    

@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "개인 블로그",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/potato179/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/potato179/blog/issues"
+  },
+  "homepage": "https://github.com/potato179/blog#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "showdown": "^1.9.1"
+  }
+}
