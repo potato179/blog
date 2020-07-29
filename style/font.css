@@ -1,6 +1,5 @@
 .center{
     text-align: center;
-    float: center;
 }
 .right{
     text-align: right;
@@ -51,17 +50,11 @@
     font-size: xx-small;
 }
 .intro{
-    font-size: 400%;
+    font-size: 300%;
     font-weight: bold;
-}
-.mintro{
-    font-size: 250%;
 }
 .idescription{
     font-size: medium;
-}
-.mdescription{
-    font-size: large;
 }
 .larger{
     font-size: larger;
@@ -530,9 +523,6 @@
 }
 .haengsinms{
     color: #7d3147;
-}
-.muc{
-    color: #7289db;
 }
 .shadow-aliceblue{
     text-shadow: 2px 2px AliceBlue;
